@@ -17,6 +17,7 @@ async function uploadFile() {
   try {
     const data = await s3Client.send(new PutObjectCommand(params));
     console.log("Success! File uploaded.");
+    console.log("A new change has been made to the app.js file.");
   } catch (err) {
     console.error("Error", err);
   }
